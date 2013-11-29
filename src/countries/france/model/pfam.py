@@ -57,12 +57,12 @@ def _smic55(salbrut, _P):
     smic_annuel_brut = _P.cotsoc.gen.smic_h_b * nbh_travaillees
     return salbrut >= _P.fam.af.seuil_rev_taux * smic_annuel_brut
 
-def _br_pf_i(tspr, hsup, rpns):
+def _br_pf_i(tspr, hsup, rpns, alr):
     '''
     Base ressource individuelle des prestations familiales
     'ind'
     '''
-    return tspr + hsup + rpns
+    return tspr + hsup + rpns + alr 
 
 def _biact(br_pf_i, _P, _option={'br_pf_i': [CHEF, PART]}):
     '''
